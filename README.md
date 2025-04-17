@@ -9,17 +9,8 @@ Spring 2025 – Monday/Wednesday 2:30PM Section
 
 ## PURPOSE OF SOFTWARE
 
-This project implements a matrix library in both C++ and C to perform basic matrix operations including addition, scalar multiplication, matrix multiplication, and transposition. The objective is to evaluate the matrix expression:
-
-D = A + (3 * B) × Cᵗ
-
-Where:
-- A is a 2x2 matrix
-- B is a 2x3 matrix
-- C is a 2x3 matrix
-- Cᵗ is the transpose of C (3x2)
-
-The output D is a 2x2 matrix.
+The objective is to build a reusable matrix library in both C and C++ that supports core operations like addition, scalar multiplication, matrix multiplication, and transposition.
+While the expression D = A + (3 * B) × Cᵗ was used as a reference example, the code is designed to handle any valid input matrices and expressions using the provided operations.
 
 ---
 
