@@ -5,24 +5,30 @@ using namespace std;
 
 int main() {
     Matrix A({
-        {6, 4},
-        {8, 3}
+        {1, 2},
+        {3, 4}
     });
 
     Matrix B({
-        {1, 2, 3},
-        {4, 5, 6}
+        {5, 6},
+        {7, 8}
     });
 
-    Matrix C({
-        {2, 4, 6},
-        {1, 3, 5}
-    });
+    Matrix C = A + B;
+    cout << "A + B = \n";
+    C.print();
 
-    Matrix D = A + (B * 3) * C.transpose();
-
-    cout << "Result D = A + (3 * B) × Cᵗ:\n";
+    Matrix D = A * 2;
+    cout << "A * 2 = \n";
     D.print();
+
+    Matrix E = A * B;
+    cout << "A * B = \n";
+    E.print();
+
+    Matrix F = A.transpose();
+    cout << "Transpose of A = \n";
+    F.print();
 
     return 0;
 }

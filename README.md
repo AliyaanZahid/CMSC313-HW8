@@ -52,25 +52,15 @@ To clean up compiled binaries: make clean
 ---
 
 ## TESTING METHODOLOGY
-Matrix values are hardcoded in both versions.
+The program tests all required operations:
 
-Input:
+Matrix addition (A + B)
 
-A = [6  4]  
-    [8  3]  
+Scalar multiplication (A * 2)
 
-B = [1 2 3]  
-    [4 5 6]  
+Matrix multiplication (A * B)
 
-C = [2 4 6]  
-    [1 3 5]  
-
-Expected output:
-
-D = [90  70]  
-    [200 150]
-
-Both programs return the correct result, confirming the correctness of operations.
+Transposition (Aᵗ)
 
 ---
 

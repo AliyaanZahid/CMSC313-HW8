@@ -2,32 +2,34 @@
 #include "matrix.h"
 
 int main() {
-    int a_data[MAX_ROWS][MAX_COLS] = {
-        {6, 4},
-        {8, 3}
+    int data1[MAX_ROWS][MAX_COLS] = {
+        {1, 2},
+        {3, 4}
     };
 
-    int b_data[MAX_ROWS][MAX_COLS] = {
-        {1, 2, 3},
-        {4, 5, 6}
+    int data2[MAX_ROWS][MAX_COLS] = {
+        {5, 6},
+        {7, 8}
     };
 
-    int c_data[MAX_ROWS][MAX_COLS] = {
-        {2, 4, 6},
-        {1, 3, 5}
-    };
+    Matrix A = createMatrix(2, 2, data1);
+    Matrix B = createMatrix(2, 2, data2);
 
-    Matrix A = createMatrix(2, 2, a_data);
-    Matrix B = createMatrix(2, 3, b_data);
-    Matrix C = createMatrix(2, 3, c_data);
+    Matrix C = add(A, B);
+    printf("A + B = \n");
+    printMatrix(C);
 
-    Matrix B_scaled = scale(B, 3);
-    Matrix C_T = transpose(C);
-    Matrix result = multiply(B_scaled, C_T);
-    Matrix D = add(A, result);
-
-    printf("Result D = A + (3 * B) × Cᵗ:\n");
+    Matrix D = scale(A, 2);
+    printf("A * 2 = \n");
     printMatrix(D);
+
+    Matrix E = multiply(A, B);
+    printf("A * B = \n");
+    printMatrix(E);
+
+    Matrix F = transpose(A);
+    printf("Transpose of A = \n");
+    printMatrix(F);
 
     return 0;
 }
